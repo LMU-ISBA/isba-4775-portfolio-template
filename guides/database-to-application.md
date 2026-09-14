@@ -286,7 +286,7 @@ exit
 Repeat the MySQL stop/start test from Section 5. Confirm that the new version
 still returns 503 during failure and recovers to 200 with the correct values.
 
-Inspect the changes with `git diff`. Explain which lines implement the new
+Open Source Control and click each changed file. Explain which lines implement the new
 requirement and why the other behavior should still work. Update the evidence
 README, then stage, commit, and push using the portfolio guide. Use the message:
 
@@ -328,7 +328,8 @@ MySQL to produce its results, with no model call required for each request.
 ## 9. Finish the session
 
 1. Record the startup command and your verification results in `ex03/README.md`.
-2. Check `git status`, and push any intended final documentation changes.
+2. Review Source Control. If you changed documentation, repeat the three save-cycle
+   commands in the portfolio guide with a message describing those changes.
 3. Confirm the files and application commits are visible on GitHub.
 4. Stop the portfolio Codespace at https://github.com/codespaces.
 5. Confirm both this Codespace and Thursday's Codespace are stopped.

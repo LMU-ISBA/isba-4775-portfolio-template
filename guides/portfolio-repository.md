@@ -108,12 +108,11 @@ Codespace terminal:
 
 ```bash
 pwd
-git remote -v
 ls ex03
 ```
 
-The directory should be `/workspaces/isba-4775-portfolio`. The remote should
-identify your portfolio, and `ex03` should contain the starter files.
+The directory should be `/workspaces/isba-4775-portfolio`, and `ex03` should
+contain the starter files.
 
 This is a fresh environment. Thursday's installed services and MySQL data
 belong to the old Codespace. We'll recreate the lab from the files you own.
@@ -220,53 +219,32 @@ We'll use this sequence for the working application and its follow-up change.
 A push doesn't deploy the application. Installed packages and live MySQL data
 also aren't included in a Git commit. We commit the files that recreate them.
 
-From the repository root, inspect your work before staging it:
+Save your files, then open **Source Control** in the left sidebar. Click each
+changed file to review it, including new files. Check that no password appears
+in the code or documentation. The starter ignores `.env`, `.venv/`, and caches.
+
+From the repository root (`/workspaces/isba-4775-portfolio`), run three commands:
 
 ```bash
-git status
-git diff
-```
-
-`git diff` shows changes to tracked files. Open new, untracked files in the
-editor too. Check for credentials before staging any file.
-
-Stage the exercise folder and any intended root README changes:
-
-```bash
-git add ex03 README.md .gitignore
-git diff --cached --stat
-git diff --cached
-```
-
-`--cached` shows the exact changes selected for the next commit. The starter
-ignores `.env` files, `.venv/`, and Python caches. That doesn't protect a
-password written directly into Python, SQL, or Markdown.
-
-If an unwanted file is staged, use `git restore --staged PATH` with its actual
-path. This removes it from staging while keeping the file in your Codespace.
-
-Once the staged changes are correct, record the verified baseline:
-
-```bash
+git add .
 git commit -m "Build and verify the Python sales page"
-git push origin main
-git status
+git push
 ```
+
+`git add .` stages the changes in this folder and its subfolders. `git commit`
+records that version. `git push` sends it to your GitHub repository.
 
 Open your portfolio on GitHub. Find the new commit and open `ex03/` to confirm
-the files arrived. A commit shown only in the terminal hasn't proved a push.
+the files arrived. If a command fails or asks for identity information, stop
+and show the instructor the message.
 
-If Git asks for author identity, configure your name and a verified or GitHub
-no-reply email for this repository with the instructor. If push fails, read
-the message and check `git remote -v`. Don't paste an access token into a remote
-URL or force-push to get past an error.
-
-After the small change, repeat the review and staging steps, then use:
+After the small change, save and review the files in Source Control again.
+Run the same three commands from the repository root, changing the message:
 
 ```bash
+git add .
 git commit -m "Add sale count and average"
-git push origin main
-git log --oneline -3
+git push
 ```
 
 Find both application commits on GitHub and compare them. The template's
