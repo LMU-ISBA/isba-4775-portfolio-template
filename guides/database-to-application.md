@@ -309,6 +309,15 @@ Discuss what another environment would need to run your application:
 If MySQL moved to a different server, would `127.0.0.1` still reach it?
 Which setting would change, and how would you test the new connection?
 
+If time permits, the instructor will show this application on Railway, a
+platform as a service (PaaS). Watch GitHub code become a build and a running
+service. Compare its database address, variables, logs, and public URL with
+the Codespace. Codespaces secrets do not automatically become Railway variables.
+The deployed application should keep working after the development Codespace stops.
+
+You do not need to create a Railway service today. Student deployment will
+follow in the personal-site work, with setup instructions provided then.
+
 Project 1's personal site will use this planning, verification, and Git workflow.
 Its requirements will determine whether it needs a database. Project 2 will
 add more services, including an agent endpoint and domain data.
